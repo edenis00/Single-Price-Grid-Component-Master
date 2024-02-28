@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: hsl(204, 43%, 93%);
+}
+
+.container {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: grid;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #fff;
+    grid-template-columns: 50% 50%;
+    margin: 2em 1em;
+    grid-template-areas: 'a a ' 'b c';
+
+}
+
+.top {
+    grid-area: a;
+}
+
+.bottom-left {
+    color: #fff;
+    grid-area: b;
+    background: linear-gradient(40deg, hsl(179, 62%, 50%), hsl(179, 62%, 43%));
+}
+
+.bottom-right {
+    grid-area: c;
+    background: hsl(179, 62%, 50%);
+}
+
+.box {
+    padding: 40px;
+}
+
+h2 {
+    color: #fff;
+    font-size: 19px;
+    padding-bottom: 20px;
+}
+
+.top h2 {
+    font-size: 23px;
+    color: hsl(179, 62%, 50%);
+}
+
+.top h3 {
+    color: hsl(71, 73%, 54%);
+    margin-bottom: 10px;
+}
+
+.top p {
+    color: hsl(218, 22%, 67%);
+    line-height: 25px;
+}
+
+.bottom-left h4 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.bottom-left .price {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    padding-right: 15px;
+}
+
+.bottom-left span {
+    color: hsl(204, 43%, 93%);
+    font-weight: 400;
+}
+
+.btn {
+    color: #fff;
+    width: 100%;
+    display: block;
+    padding: 1em;
+    text-align: center;
+    border-radius: 8px;
+    background: hsl(71, 73%, 54%);
+    margin-top: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0em 0em .8em .2em #1313;
+}
+
+.bottom-right p {
+    color: hsl(204, 43%, 93%);
+    line-height: 25px;
+}
+
+@media (max-width: 375px) {
+    body {
+        display: block;
+    }
+    .wrapper{
+        grid-template-columns: 100%;
+        grid-template-areas: 'a' 'b' 'c';
+    }
+    .box {
+        padding: 30px;
+    }
+
+}
